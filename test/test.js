@@ -31,7 +31,7 @@ test ('build a script', function (t) {
   return exec('docker build -t test-install-script .', options)
     .then(function () {
       // test if npm module installed
-      return exec('docker run --rm test-install-script ava --help');
+      return exec('docker run test-install-script ava --help');
     })
     .then(function () {
       removeFile(path);
