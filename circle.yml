@@ -1,3 +1,5 @@
 machine:
   node:
     version: stable
+  services:
+    - docker
